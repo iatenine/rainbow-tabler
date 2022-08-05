@@ -1,12 +1,15 @@
 const fs = require("fs");
 
-writeToFile = (data, salt = "") => {
+writeToFile = async (data, salt = "") => {
   const filename = salt
     ? `./dist/salted/${salt}.txt`
-    : "./dist/unsalted/out.txt";
-  fs.writeFileSync(filename, data, (err) => {
-    console.error("Something went wrong: ", err);
-  });
+    : `./dist/unsalted/out.txt`;
+  try {
+    fs.writeFileSync(filename, data);
+  } catch (err) {
+    console.error("Something went wrong. Please contact the maintainer");
+    console.error(err);
+  }
 };
 
 module.exports = { writeToFile };
