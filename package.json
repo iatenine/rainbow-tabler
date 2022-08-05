@@ -1,5 +1,5 @@
 {
-  "name": "hashing-experiments",
+  "name": "rainbow-tabler",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jack Linhart",
   "license": "ISC",
   "dependencies": {
     "sha.js": "^2.4.11"
